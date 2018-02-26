@@ -1,9 +1,10 @@
 ﻿using System.Linq;
+using VirtoCommerce.Platform.Core.Common;
 using VirtoCommerce.WishlistModule.Data.Models;
 
 namespace VirtoCommerce.WishlistModule.Data.Repositories
 {
-    public interface IWishlistRepository
+    public interface IWishlistRepository : IRepository
     {
         IQueryable<WishlistEntity> Wishlists { get; }
 
@@ -11,10 +12,10 @@ namespace VirtoCommerce.WishlistModule.Data.Repositories
 
         WishlistEntity[] GetWishlistsByIds(string[] ids);
 
-        void RemoveWishlistsByIds(string ids);
+        void RemoveWishlistsByIds(string[] ids);
 
         WishlistLinkEntity[] GetWishlistLinksByIds(string[] ids);
 
-        void RemoveWishlistLinksByIds(string ids);
+        void RemoveWishlistLinksByIds(string[] ids);
     }
 }

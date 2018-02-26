@@ -5,12 +5,6 @@ namespace VirtoCommerce.WishlistModule.Core.Model
 {
     public class Wishlist : AuditableEntity
     {
-        public Wishlist()
-        {
-            Items = new List<WishlistItem>();
-            Links = new List<WishlistLink>();
-        }
-
         public string Name { get; set; }
 
         public string Type { get; set; }

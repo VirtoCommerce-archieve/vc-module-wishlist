@@ -54,22 +54,32 @@ namespace VirtoCommerce.WishlistModule.Data.Repositories
 
         public WishlistLinkEntity[] GetWishlistLinksByIds(string[] ids)
         {
-            throw new NotImplementedException();
+            return WishlistLinks.Where(x => ids.Contains(x.Id)).ToArray();
         }
 
         public WishlistEntity[] GetWishlistsByIds(string[] ids)
         {
-            throw new NotImplementedException();
+            return Wishlists
+                .Include(x => x.Items)
+                .Include(x => x.Links)
+                .Where(x => ids.Contains(x.Id))
+                .ToArray();
         }
 
-        public void RemoveWishlistLinksByIds(string ids)
+        public void RemoveWishlistLinksByIds(string[] ids)
         {
-            throw new NotImplementedException();
+            foreach (var entity in GetWishlistLinksByIds(ids))
+            {
+                Remove(entity);
+            }
         }
 
-        public void RemoveWishlistsByIds(string ids)
+        public void RemoveWishlistsByIds(string[] ids)
         {
-            throw new NotImplementedException();
+            foreach (var entity in GetWishlistsByIds(ids))
+            {
+                Remove(entity);
+            }
         }
     }
 }
