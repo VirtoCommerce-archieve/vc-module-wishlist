@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtoCommerce.WishlistModule.Web", "VirtoCommerce.WishlistModule.Web\VirtoCommerce.WishlistModule.Web.csproj", "{83424365-6543-4996-9991-EC94ECE8F87C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtoCommerce.WishlistModule.Core", "VirtoCommerce.WishlistModule.Core\VirtoCommerce.WishlistModule.Core.csproj", "{355709CB-7903-4860-A509-1B871BC7A950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtoCommerce.WishlistModule.Data", "VirtoCommerce.WishlistModule.Data\VirtoCommerce.WishlistModule.Data.csproj", "{0691806D-5F5B-4094-B76E-CFE41DCF0AF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83424365-6543-4996-9991-EC94ECE8F87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83424365-6543-4996-9991-EC94ECE8F87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83424365-6543-4996-9991-EC94ECE8F87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83424365-6543-4996-9991-EC94ECE8F87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{355709CB-7903-4860-A509-1B871BC7A950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355709CB-7903-4860-A509-1B871BC7A950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355709CB-7903-4860-A509-1B871BC7A950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355709CB-7903-4860-A509-1B871BC7A950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0691806D-5F5B-4094-B76E-CFE41DCF0AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0691806D-5F5B-4094-B76E-CFE41DCF0AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0691806D-5F5B-4094-B76E-CFE41DCF0AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0691806D-5F5B-4094-B76E-CFE41DCF0AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE494266-B7E5-424C-8F8B-10B03288C792}
+	EndGlobalSection
+EndGlobal

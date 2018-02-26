@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module>
+    <id>VirtoCommerce.Wishlist</id>
+    <version>1.0.0</version>
+    <platformVersion>2.13.21</platformVersion>
+
+    <title>Wishlist Module</title>
+    <description>Manage wish lists</description>
+    <authors>
+        <author>Konstantin Savosteev</author>
+    </authors>
+    <owners>
+        <owner>Virto Commerce</owner>
+    </owners>
+
+    <assemblyFile>VirtoCommerce.WishlistModule.Web.dll</assemblyFile>
+    <moduleType>VirtoCommerce.WishlistModule.Web.Module, VirtoCommerce.WishlistModule.Web</moduleType>
+
+</module>
