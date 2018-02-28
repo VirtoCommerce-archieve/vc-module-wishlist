@@ -30,7 +30,7 @@ namespace VirtoCommerce.WishlistModule.Data.Models
 
         public ObservableCollection<WishlistLinkEntity> Links { get; set; }
 
-        public virtual WishlistEntity FromEntity(Wishlist wishlist, PrimaryKeyResolvingMap pkMap)
+        public virtual WishlistEntity FromModel(Wishlist wishlist, PrimaryKeyResolvingMap pkMap)
         {
             if (wishlist == null)
                 throw new ArgumentNullException(nameof(wishlist));
@@ -67,9 +67,9 @@ namespace VirtoCommerce.WishlistModule.Data.Models
 
             wishlist.Id = Id;
             wishlist.Name = Name;
-            wishlist.Type = wishlist.Type;
-            wishlist.MemberId = wishlist.MemberId;
-            wishlist.StoreId = wishlist.StoreId;
+            wishlist.Type = Type;
+            wishlist.MemberId = MemberId;
+            wishlist.StoreId = StoreId;
             wishlist.CreatedBy = CreatedBy;
             wishlist.CreatedDate = CreatedDate;
             wishlist.ModifiedBy = ModifiedBy;

@@ -75,6 +75,10 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Migrations\201802271058053_Initial.cs" />
+    <Compile Include="Migrations\201802271058053_Initial.Designer.cs">
+      <DependentUpon>201802271058053_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WishlistItemEntity.cs" />
     <Compile Include="Models\WishlistEntity.cs" />
@@ -97,6 +101,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802271058053_Initial.resx">
+      <DependentUpon>201802271058053_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

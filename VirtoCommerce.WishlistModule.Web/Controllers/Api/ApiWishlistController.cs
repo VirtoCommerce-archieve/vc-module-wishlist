@@ -1,6 +1,8 @@
 ﻿using System.Linq;
+using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
+using VirtoCommerce.Platform.Core.Web.Security;
 using VirtoCommerce.WishlistModule.Core.Model;
 using VirtoCommerce.WishlistModule.Core.Services;
 using VirtoCommerce.WishlistModule.Web.Models;
@@ -44,6 +46,34 @@ namespace VirtoCommerce.WishlistModule.Web.Controllers.Api
                 TotalCount = searchResult.TotalCount
             };
             return Ok(result);
+        }
+
+
+        [HttpPost]
+        [Route("")]
+        [ResponseType(typeof(Wishlist))]
+        public IHttpActionResult CreateWishlist(Wishlist wishlist)
+        {
+            _wishlistService.SaveOrUpdate(new[] { wishlist });
+            return Ok(wishlist);
+        }
+
+        [HttpPut]
+        [Route("")]
+        [ResponseType(typeof(void))]
+        public IHttpActionResult UpdateWishlist(Wishlist wishlist)
+        {
+            _wishlistService.SaveOrUpdate(new[] { wishlist });
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        [HttpDelete]
+        [Route("")]
+        [ResponseType(typeof(void))]
+        public IHttpActionResult RemoveWishlistsByIds([FromUri] string[] ids)
+        {
+            _wishlistService.RemoveByIds(ids);
+            return StatusCode(HttpStatusCode.NoContent);
         }
     }
 }
